@@ -125,6 +125,13 @@ class Game {
     }
   }
 
+  buttonReset() {
+    const buttonReset = document.createElement("button");
+    buttonReset.textContent = "try again";
+    buttonReset.addEventListener("click", (event) => this.reset());
+    this.btn.appendChild(buttonReset);
+  }
+
   reset() {
     for (this.currentStep = 0; this.currentStep < 8; this.currentStep++) {
       document.getElementsByClassName("step")[
